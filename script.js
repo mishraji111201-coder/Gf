@@ -75,4 +75,6 @@ document.getElementById("yes").addEventListener("click", () => {
       "_blank"
     );
   }, 3500);
+});yesBtn.addEventListener("click", () => {
+  music.play();
 });

@@ -77,4 +77,28 @@ document.getElementById("yes").addEventListener("click", () => {
   }, 3500);
 });yesBtn.addEventListener("click", () => {
   music.play();
+});let noCount = 0;
+
+const noMessages = [
+  "Are you sure? 🥺",
+  "Ek baar aur soch lo 💔",
+  "Dil toot jayega mera 😢",
+  "Last chance… warna YES hi bachega 😏"
+];
+
+noBtn.addEventListener("click", () => {
+  noCount++;
+
+  if (noCount <= 3) {
+    noBtn.innerText = noMessages[noCount - 1];
+  } 
+  else if (noCount === 4) {
+    noBtn.style.position = "absolute";
+    noBtn.style.left = Math.random() * 70 + "%";
+    noBtn.style.top = Math.random() * 60 + "%";
+  } 
+  else {
+    noBtn.style.display = "none";
+    noText.innerText = "Bas bas… ab YES hi option hai ❤️";
+  }
 });

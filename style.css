@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(180deg, #ff5f8f, #ff9966);
+  font-family: system-ui, sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.card, .final {
+  background: #fff;
+  padding: 26px;
+  border-radius: 22px;
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+h1 {
+  color: #ff2d55;
+  margin-bottom: 12px;
+}
+
+#dialogue {
+  min-height: 90px;
+  color: #444;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.buttons {
+  position: relative;
+  height: 60px;
+}
+
+button {
+  padding: 14px 24px;
+  border-radius: 30px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+#yes {
+  background: linear-gradient(45deg, #ff0844, #ffb199);
+  color: white;
+  box-shadow: 0 0 20px rgba(255,0,80,0.8);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  50% { box-shadow: 0 0 35px rgba(255,0,80,1); }
+}
+
+#no {
+  background: #eee;
+  position: absolute;
+  right: 0;
+}
+
+.final {
+  display: none;
+}
+
+#lyrics {
+  color: #ff2d55;
+  line-height: 1.7;
+  min-height: 120px;
+}
+
+.rose {
+  position: fixed;
+  top: -30px;
+  font-size: 22px;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+canvas {
+  pointer-events: none;
+}

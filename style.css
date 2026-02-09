@@ -45,46 +45,48 @@ h1 {
   white-space: pre-line;
 }
 
-/* BUTTON WRAPPER */
+/* BUTTON WRAPPER — EXTRA SPACE */
 .buttons {
   position: relative;
-  height: 60px;
+  height: 96px;          /* prevents clash */
+  margin-top: 10px;
 }
 
-/* BUTTONS */
+/* BUTTON BASE */
 button {
   padding: 14px 26px;
   border-radius: 30px;
   border: none;
   font-size: 18px;
   cursor: pointer;
-  position: relative;
+  position: absolute;   /* controlled positions */
   z-index: 10;
   transition: transform 0.2s ease;
 }
 
-/* YES BUTTON */
+/* YES — LOCKED LEFT */
 #yesBtn {
+  left: 0;
   background: linear-gradient(45deg, #ff0844, #ffb199);
   color: #fff;
   box-shadow: 0 0 20px rgba(255,0,80,0.8);
   animation: pulse 1.5s infinite;
 }
 
+/* YES PULSE */
 @keyframes pulse {
   0% { box-shadow: 0 0 18px rgba(255,0,80,0.6); }
   50% { box-shadow: 0 0 35px rgba(255,0,80,1); }
   100% { box-shadow: 0 0 18px rgba(255,0,80,0.6); }
 }
 
-/* NO BUTTON */
+/* NO — STARTS RIGHT */
 #noBtn {
-  background: #eee;
-  position: absolute;
   right: 0;
+  background: #eee;
 }
 
-/* SHAKE ON TAP */
+/* NO SHAKE */
 #noBtn:active {
   animation: shake 0.3s;
 }
